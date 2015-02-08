@@ -410,6 +410,7 @@
 				589165E71A87C717009BA42C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		589165E81A87C717009BA42C /* Build configuration list for PBXNativeTarget "GiffyTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +419,7 @@
 				589165EA1A87C717009BA42C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
