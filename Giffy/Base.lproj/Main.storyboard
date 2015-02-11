@@ -672,16 +672,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="4K3-DJ-hXf">
+                                <rect key="frame" x="240" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Abl-Ee-D9i"/>
+                                    <constraint firstAttribute="height" constant="20" id="vlf-dO-yik"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="-" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DpD-6Y-hgF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="E0O-5j-4SK">
+                                <rect key="frame" x="259" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="VhX-bh-1We"/>
+                                    <constraint firstAttribute="height" constant="20" id="hFp-wS-Eku"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="+" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HJ3-MH-WBj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="9mc-bT-0Qy">
+                                <rect key="frame" x="202" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ec8-4J-pRc"/>
+                                    <constraint firstAttribute="width" constant="20" id="pvP-zS-LQ8"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="&lt;" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ssu-eV-L8O">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="TJZ-uP-ETX">
+                                <rect key="frame" x="221" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0Iv-5C-K3M"/>
+                                    <constraint firstAttribute="width" constant="20" id="5zn-wj-h5R"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="&gt;" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z19-UX-1B2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAu-f8-Eo4">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="30" width="480" height="240"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="PBL-cK-auV"/>
                             </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="E0O-5j-4SK" secondAttribute="centerX" constant="-29" id="0uS-VH-Ob7"/>
+                            <constraint firstAttribute="centerX" secondItem="TJZ-uP-ETX" secondAttribute="centerX" constant="9" id="7eG-9K-Gof"/>
+                            <constraint firstAttribute="centerX" secondItem="9mc-bT-0Qy" secondAttribute="centerX" constant="28" id="PFP-I1-1GB"/>
+                            <constraint firstAttribute="bottom" secondItem="9mc-bT-0Qy" secondAttribute="bottom" constant="5" id="eHu-Xr-9yN"/>
+                            <constraint firstAttribute="bottom" secondItem="TJZ-uP-ETX" secondAttribute="bottom" constant="5" id="gYc-mx-GAn"/>
                             <constraint firstItem="uAu-f8-Eo4" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="glG-6L-FdL"/>
+                            <constraint firstAttribute="bottom" secondItem="4K3-DJ-hXf" secondAttribute="bottom" constant="5" id="l6g-Dv-tjH"/>
                             <constraint firstAttribute="trailing" secondItem="uAu-f8-Eo4" secondAttribute="trailing" id="pNh-S5-ls1"/>
+                            <constraint firstAttribute="bottom" secondItem="E0O-5j-4SK" secondAttribute="bottom" constant="5" id="pNo-oR-bZA"/>
                             <constraint firstItem="uAu-f8-Eo4" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="pT5-b8-AIS"/>
-                            <constraint firstAttribute="bottom" secondItem="uAu-f8-Eo4" secondAttribute="bottom" id="vFP-Cn-5sa"/>
+                            <constraint firstAttribute="centerX" secondItem="4K3-DJ-hXf" secondAttribute="centerX" constant="-10" id="u4z-QR-YWo"/>
+                            <constraint firstAttribute="bottom" secondItem="uAu-f8-Eo4" secondAttribute="bottom" constant="30" id="vFP-Cn-5sa"/>
                         </constraints>
                     </view>
                     <connections>
