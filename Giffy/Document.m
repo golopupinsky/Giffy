@@ -31,14 +31,13 @@
     [super windowControllerDidLoadNib:aController];
 }
 
-//+ (BOOL)autosavesInPlace {
-//    return YES;
-//}
-
 - (void)makeWindowControllers {
     NSWindowController *window = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"];
     viewController = (ViewController *) window.contentViewController;
-    viewController.imageView.image = image;
+    
+    if(image != nil){
+        viewController.imageView.image = image;
+    }
     
     [self addWindowController:window];
 }
@@ -46,6 +45,10 @@
 -(BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError{
     
     image = [[NSImage alloc]initWithContentsOfURL: url];
+    
+    if(viewController != nil){
+        viewController.imageView.image = image;
+    }
     
     return YES;
 }
