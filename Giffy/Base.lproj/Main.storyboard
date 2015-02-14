@@ -682,6 +682,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="zoomOut:" target="5gI-5U-AMq" id="IFZ-Ah-ldE"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="E0O-5j-4SK">
                                 <rect key="frame" x="259" y="5" width="20" height="20"/>
@@ -693,6 +696,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="zoomIn:" target="5gI-5U-AMq" id="j0g-wZ-Mv8"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="9mc-bT-0Qy">
                                 <rect key="frame" x="202" y="5" width="20" height="20"/>
@@ -704,6 +710,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="previous:" target="5gI-5U-AMq" id="HMz-zf-3ZX"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="TJZ-uP-ETX">
                                 <rect key="frame" x="221" y="5" width="20" height="20"/>
@@ -715,6 +724,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="next:" target="5gI-5U-AMq" id="kxg-0M-EXK"/>
+                                </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAu-f8-Eo4">
                                 <rect key="frame" x="0.0" y="30" width="480" height="240"/>

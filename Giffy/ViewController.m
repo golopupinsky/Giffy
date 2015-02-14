@@ -15,5 +15,13 @@
 
 }
 
+- (IBAction)previous:(id)sender {
+}
+- (IBAction)next:(id)sender {
+}
+- (IBAction)zoomOut:(id)sender {
+}
+- (IBAction)zoomIn:(id)sender {
+}
 
 @end
