@@ -672,6 +672,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAu-f8-Eo4">
+                                <rect key="frame" x="0.0" y="30" width="480" height="240"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="PBL-cK-auV"/>
+                            </imageView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fch-Hy-aUB" customClass="DragAndDropView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5gI-5U-AMq" id="lrf-uV-lg8"/>
+                                </connections>
+                            </customView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="4K3-DJ-hXf">
                                 <rect key="frame" x="240" y="5" width="20" height="20"/>
                                 <constraints>
@@ -728,19 +738,19 @@
                                     <action selector="next:" target="5gI-5U-AMq" id="kxg-0M-EXK"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAu-f8-Eo4">
-                                <rect key="frame" x="0.0" y="30" width="480" height="240"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="PBL-cK-auV"/>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="E0O-5j-4SK" secondAttribute="centerX" constant="-29" id="0uS-VH-Ob7"/>
                             <constraint firstAttribute="centerX" secondItem="TJZ-uP-ETX" secondAttribute="centerX" constant="9" id="7eG-9K-Gof"/>
+                            <constraint firstAttribute="bottom" secondItem="fch-Hy-aUB" secondAttribute="bottom" id="N1h-kI-5Zv"/>
                             <constraint firstAttribute="centerX" secondItem="9mc-bT-0Qy" secondAttribute="centerX" constant="28" id="PFP-I1-1GB"/>
                             <constraint firstAttribute="bottom" secondItem="9mc-bT-0Qy" secondAttribute="bottom" constant="5" id="eHu-Xr-9yN"/>
                             <constraint firstAttribute="bottom" secondItem="TJZ-uP-ETX" secondAttribute="bottom" constant="5" id="gYc-mx-GAn"/>
                             <constraint firstItem="uAu-f8-Eo4" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="glG-6L-FdL"/>
                             <constraint firstAttribute="bottom" secondItem="4K3-DJ-hXf" secondAttribute="bottom" constant="5" id="l6g-Dv-tjH"/>
+                            <constraint firstItem="fch-Hy-aUB" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="m1L-DV-ucx"/>
+                            <constraint firstItem="fch-Hy-aUB" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="mkk-aK-9zh"/>
+                            <constraint firstAttribute="trailing" secondItem="fch-Hy-aUB" secondAttribute="trailing" id="otU-Tx-i3Z"/>
                             <constraint firstAttribute="trailing" secondItem="uAu-f8-Eo4" secondAttribute="trailing" id="pNh-S5-ls1"/>
                             <constraint firstAttribute="bottom" secondItem="E0O-5j-4SK" secondAttribute="bottom" constant="5" id="pNo-oR-bZA"/>
                             <constraint firstItem="uAu-f8-Eo4" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="pT5-b8-AIS"/>

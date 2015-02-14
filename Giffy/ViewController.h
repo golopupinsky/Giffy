@@ -7,11 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DragAndDropView.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController<DragAndDropDelegate>
 
 @property(nonatomic,strong) IBOutlet NSImageView *imageView;
-
 
 @end
 

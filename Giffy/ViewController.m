@@ -24,4 +24,11 @@
 - (IBAction)zoomIn:(id)sender {
 }
 
+
+-(void)filesDropped:(NSArray *)files{
+    if(files.count == 1){
+        self.imageView.image = [[NSImage alloc]initWithContentsOfFile:files[0]];
+    }
+}
+
 @end
