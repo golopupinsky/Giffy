@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58465BEF1A8FE3BF00FC7A84 /* DragAndDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58465BEE1A8FE3BF00FC7A84 /* DragAndDropView.m */; };
+		588CDBFC1A90AAA0007B54FF /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 588CDBFB1A90AAA0007B54FF /* Window.m */; };
 		589165C91A87C717009BA42C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 589165C81A87C717009BA42C /* AppDelegate.m */; };
 		589165CB1A87C717009BA42C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 589165CA1A87C717009BA42C /* main.m */; };
 		589165CE1A87C717009BA42C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589165CD1A87C717009BA42C /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		58465BED1A8FE3BF00FC7A84 /* DragAndDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragAndDropView.h; sourceTree = "<group>"; };
 		58465BEE1A8FE3BF00FC7A84 /* DragAndDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragAndDropView.m; sourceTree = "<group>"; };
+		588CDBFA1A90AAA0007B54FF /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		588CDBFB1A90AAA0007B54FF /* Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Window.m; sourceTree = "<group>"; };
 		589165C21A87C717009BA42C /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589165C61A87C717009BA42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589165C71A87C717009BA42C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				589165C51A87C717009BA42C /* Supporting Files */,
 				58465BED1A8FE3BF00FC7A84 /* DragAndDropView.h */,
 				58465BEE1A8FE3BF00FC7A84 /* DragAndDropView.m */,
+				588CDBFA1A90AAA0007B54FF /* Window.h */,
+				588CDBFB1A90AAA0007B54FF /* Window.m */,
 			);
 			path = Giffy;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				58465BEF1A8FE3BF00FC7A84 /* DragAndDropView.m in Sources */,
 				589165D11A87C717009BA42C /* Document.m in Sources */,
 				589165CE1A87C717009BA42C /* ViewController.m in Sources */,
+				588CDBFC1A90AAA0007B54FF /* Window.m in Sources */,
 				589165CB1A87C717009BA42C /* main.m in Sources */,
 				589165C91A87C717009BA42C /* AppDelegate.m in Sources */,
 			);
@@ -297,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -333,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -347,6 +353,7 @@
 				INFOPLIST_FILE = Giffy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -358,6 +365,7 @@
 				INFOPLIST_FILE = Giffy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

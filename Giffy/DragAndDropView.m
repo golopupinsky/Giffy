@@ -24,9 +24,7 @@
     NSArray *draggedFilePaths = [pboard propertyListForType:NSFilenamesPboardType];
     
     for (NSString* file in draggedFilePaths) {
-        if([[file pathExtension] isEqualToString:@"gif"] ){
-        }
-        else{
+        if(![[file pathExtension] isEqualToString:@"gif"] ){
             return NSDragOperationNone;
         }
     }
