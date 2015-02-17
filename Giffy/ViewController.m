@@ -42,7 +42,7 @@
     
     [self initCurDirContents];
     
-    return nil
+    return nil;
 }
 
 -(void)filesDropped:(NSArray *)files{
