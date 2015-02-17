@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DragAndDropView.h"
+#import "Window.h"
 
-@interface ViewController : NSViewController<DragAndDropDelegate>
+@interface ViewController : NSViewController<DragAndDropDelegate,KeysEventsDelegate>
 
 @property(nonatomic,strong) IBOutlet NSImageView *imageView;
 

@@ -8,6 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol KeysEventsDelegate <NSObject>
+
+-(void)keyPress:(NSEvent*)pressEvent;
+
+@end
+
 @interface Window : NSWindow
 
 @end

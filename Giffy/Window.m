@@ -13,15 +13,7 @@
 - (void)sendEvent:(NSEvent *)theEvent
 {
     if(theEvent.type == NSKeyDown){
-        NSString* keysPressed = [theEvent characters];
-        if ( [keysPressed isEqualToString:@" "] ){
-            NSLog(@"spaceDown");
-            return;
-        }
-        if ( [keysPressed isEqualToString:@"\r"] || [keysPressed isEqualToString:@"\n"]){
-            NSLog(@"enter");
-            return;
-        }
+        [(id<KeysEventsDelegate>)self.contentViewController keyPress:theEvent];
     }
     else{
         [super sendEvent:theEvent];
