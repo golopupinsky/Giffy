@@ -11,7 +11,8 @@
 @implementation ViewController
 {
     NSString *curDir;
-    NSArray *curDirContents;
+    NSString *curFile;
+    NSArray *curDirFilePaths;
 }
 
 - (void)viewDidLoad {
@@ -20,6 +21,7 @@
 
 - (IBAction)previous:(id)sender {
 }
+
 - (IBAction)next:(id)sender {
     NSImage* img = [self nextImage];
     if (img != nil) {
@@ -32,15 +34,26 @@
 }
 
 -(void)initCurDirContents{
-    
+    curDirFilePaths = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:curDir error:nil];
 }
 
 -(NSImage*)nextImage{
-    if (curDir == nil) {
-        return nil;
-    }
-    
     [self initCurDirContents];
+    
+    if( curDirFilePaths != nil && curDirFilePaths.count != 0){
+        NSUInteger curIdx = [curDirFilePaths indexOfObject:curFile];
+        NSString *path = @"";
+
+        while (![path hasSuffix:@".gif"]) {
+            curIdx = (curIdx + 1) % curDirFilePaths.count;
+            path = curDirFilePaths[curIdx];
+        }
+    
+        if(path != nil){
+            curFile = path;
+            return [[NSImage alloc]initWithContentsOfFile: [curDir stringByAppendingPathComponent:path]];
+        }
+    }
     
     return nil;
 }
@@ -48,6 +61,8 @@
 -(void)filesDropped:(NSArray *)files{
     if(files.count == 1){
         self.imageView.image = [[NSImage alloc]initWithContentsOfFile:files[0]];
+        curDir = [files[0] stringByDeletingLastPathComponent];
+        curFile = files[0];
     }
 }
 
