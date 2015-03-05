@@ -20,14 +20,28 @@
 }
 
 - (IBAction)previous:(id)sender {
-}
-
-- (IBAction)next:(id)sender {
-    NSImage* img = [self nextImage];
+    [self initCurDirContents];
+    
+    int curIdx = (int)[curDirFilePaths indexOfObject:[curFile lastPathComponent]];
+    NSImage* img = [self imageWithIndex:curIdx-1];
+    
     if (img != nil) {
         self.imageView.image = img;
     }
 }
+
+- (IBAction)next:(id)sender {
+
+    [self initCurDirContents];
+    
+    int curIdx = (int)[curDirFilePaths indexOfObject:[curFile lastPathComponent]];
+    NSImage* img = [self imageWithIndex:curIdx+1];
+
+    if (img != nil) {
+        self.imageView.image = img;
+    }
+}
+
 - (IBAction)zoomOut:(id)sender {
 }
 - (IBAction)zoomIn:(id)sender {
@@ -37,18 +51,21 @@
     curDirFilePaths = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:curDir error:nil];
 }
 
--(NSImage*)nextImage{
-    [self initCurDirContents];
+-(NSImage*)imageWithIndex:(int)index{
     
     if( curDirFilePaths != nil && curDirFilePaths.count != 0){
-        NSUInteger curIdx = [curDirFilePaths indexOfObject:curFile];
         NSString *path = @"";
+        NSUInteger curIdx = [curDirFilePaths indexOfObject:[curFile lastPathComponent]];
 
         while (![path hasSuffix:@".gif"]) {
-            curIdx = (curIdx + 1) % curDirFilePaths.count;
-            path = curDirFilePaths[curIdx];
+            NSUInteger idx = index % curDirFilePaths.count;
+            path = curDirFilePaths[idx];
+            index += index - curIdx;
+            if(index < 0){
+                index = (int)curDirFilePaths.count-1;
+            }
         }
-    
+        
         if(path != nil){
             curFile = path;
             return [[NSImage alloc]initWithContentsOfFile: [curDir stringByAppendingPathComponent:path]];
